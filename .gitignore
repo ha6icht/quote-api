@@ -1,0 +1,5 @@
+__MACOSX
+node_modules
+quote-api.url
+.DS_Store
+quote-api-starting.code-workspace
