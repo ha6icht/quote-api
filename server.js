@@ -4,7 +4,7 @@ const app = express();
 const { quotes } = require('./data');
 const { getRandomElement } = require('./utils');
 
-const PORT = process.env.PORT || 4001;
+//const PORT = process.env.PORT || 4001;
 
 app.use(express.static('public'));
 
@@ -55,7 +55,7 @@ app.post('/api/quotes', (req, res, next) => {
     console.log(quotes);
 })*/
 
-app.listen(PORT, () => {
-    console.log(`The server is listening at ${PORT}`)
+const listener = app.listen(process.env.PORT, () => {
+    console.log(`The server is listening at ${listener.address().port}`)
 })
 
